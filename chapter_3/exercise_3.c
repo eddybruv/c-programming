@@ -26,8 +26,14 @@ int main(void){
 
     printf("Row sums: %d %d %d %d\n", row1, row2, row3, row4);
     printf("Column Sums: %d %d %d %d\n", col1, col2, col3, col4);
-    printf("Diagonal sums: %d %d", diag_sum1, diag_sum2);
+    printf("Diagonal sums: %d %d\n", diag_sum1, diag_sum2);
 
+    if(row1 == row2 == row3 == row4 == col1 == col2 == col3 ==col4 == diag_sum1 == diag_sum2){
+        printf("The numbers form a magic square with the engravement %d%d\n", i14, i15);
+    }
+    else{
+        printf("Number is not a magic number\n");
+    }
     return 0;
 
 }
