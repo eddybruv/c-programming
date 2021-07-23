@@ -5,28 +5,28 @@
 
 
 int main(void){
-    int arr[4][4];
-    int row1 = 0, row2 = 0, row3 = 0, row4 = 0;
-    int col1 = 0, col2 = 0, col3 = 0, col4 = 0;
+    int i1, i2, i3, i4,
+        i5, i6, i7, i8,
+        i9, i10, i11, i12,
+        i13, i14, i15, i16;
+    
     printf("Input numbers from 1 - 16 in any order: ");
-    for(int i = 0; i < 4; i++){
-        for(int j = 0; j < 4; j++){
-            scanf("%d", &arr[i][j]);
-        
-        row1 += arr[0][j];
-        row2 += arr[1][j]; 
-        row3 += arr[2][j];
-        row4 += arr[3][j];
+    //make sure to use comma(,) and space bar( ) after every input
+    scanf("%d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d, %d", &i1, &i2, &i3, &i4, &i5, &i6, &i7, &i8, &i9, &i10, &i11, &i12, &i13, &i14, &i15, &i16);
 
-        col1 += arr[i][0];
-        col2 += arr[i][1];
-        col3 += arr[i][2];
-        col4 += arr[i][3];
+    int row1 = i1 + i2 + i3 + i4, row2 = i5 + i6 + i7 + i8, row3 = i9 + i10 + i11 + i12 , row4 = i13 + i14 + i15 + i16;
+    int col1 = i1 + i5 + i9 + i13, col2 = i2 + i6 + i10 + i14, col3 = i3 + i7 + i11 + i15 , col4 = i4 + i8 + i12 + i16;
+    int diag_sum1 = i1 + i6 + i11 + i16, diag_sum2 = i4 + i7 + i10 + i13;
 
-        }
-    }
+
+    printf("%d %d %d %d\n", i1, i2, i3, i4);
+    printf("%d %d %d %d\n", i5, i6, i7, i8);
+    printf("%d %d %d %d\n", i9, i10, i11, i12);
+    printf("%d %d %d %d\n", i13, i14, i15, i16);
+
     printf("Row sums: %d %d %d %d\n", row1, row2, row3, row4);
     printf("Column Sums: %d %d %d %d\n", col1, col2, col3, col4);
+    printf("Diagonal sums: %d %d", diag_sum1, diag_sum2);
 
     return 0;
 
