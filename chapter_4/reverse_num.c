@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 int main(void){
-    int num, rev, remainder;
+    int num, remainder;
     printf("Enter a two-digit number: ");
     scanf("%d", &num);
 
