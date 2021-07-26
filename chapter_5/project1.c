@@ -1,3 +1,7 @@
+/*Date: 26-07-2021
+    by eddybruv
+    */
+
 #include <stdio.h>
 
 int main(void){
