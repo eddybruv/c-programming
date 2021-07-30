@@ -1,4 +1,4 @@
-/*Date: 29-07-2021
+/*Date: 30-07-2021
     by eddybruv
     */
 
@@ -14,7 +14,7 @@ int main(void){
 
     //number of iterations needed
     int n = days + (day - 1);
-    
+
     int day_of_the_week = 1;
 
     for(int i = 1;i <= n;i++){
