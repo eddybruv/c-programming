@@ -1,7 +1,7 @@
-/*Date: 30-07-2021
+/*Date: 31-07-2021
     by eddybruv
     */
-
+//refence from github user, Fordea
 #include <stdio.h>
 
 int main(void){
