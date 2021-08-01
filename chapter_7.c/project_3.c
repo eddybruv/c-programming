@@ -5,9 +5,10 @@
 #include <stdio.h>
 
 int main(void){
-    double n = 1.0f, sum = 0;
+    double n, sum = 0;
     printf("Enter a series of numbers(terminate with 0): ");
 
+    scanf("lf", &n);
     while(n > 0){
         scanf("%lf", &n);
         sum += n;
