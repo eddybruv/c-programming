@@ -5,11 +5,11 @@
 #include <stdio.h>
 
 int main(void){
-    float n = 1.0f, sum = 0;
+    double n = 1.0f, sum = 0;
     printf("Enter a series of numbers(terminate with 0): ");
 
     while(n > 0){
-        scanf("%f", &n);
+        scanf("%lf", &n);
         sum += n;
     }
     printf("Total sum is %f", sum);
