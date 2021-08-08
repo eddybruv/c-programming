@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 int main(void){
-    int m, n, r, gcd;
+    int m, n, r;
     printf("Enter a fraction: ");
     scanf("%d/%d", &m, &n);
 
