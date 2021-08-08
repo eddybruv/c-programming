@@ -23,7 +23,7 @@ int main(void){
 
     return 0;
 }
-
+//function
 void pay_amount(int dollars, int *twenties, int *tens, int *fives, int *ones)
 {
     *twenties = dollars / 20;
