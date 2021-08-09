@@ -12,7 +12,7 @@ int main(void){
 
     printf("In B1FF-speak: ");
     for(int i = 0; i < strlen(word);i++){
-        toupper(word[i]);
+
         if(toupper(word[i]) == 'A')
             word[i] = '4';
         if(toupper(word[i]) == 'B')
