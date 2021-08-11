@@ -12,7 +12,7 @@ int main(void){
 
     printf("Enter a number: ");
     scanf("%ld", &n);
-    
+       
     while(n > 0){
         digit = n % 10; //stores last digit
         if(digit_seen[digit])
