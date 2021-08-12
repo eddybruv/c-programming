@@ -9,7 +9,9 @@
 
 int main(void){
     int score[QUIZ][STDUENT], i, j, total = 0, quiz_total = 0, avg;
-    int highscore = score[0][0], low_score = score[0][1];
+    int highscore, low_score;
+
+    highscore = low_score = score[0][0];
     
     
     for(i = 0; i < QUIZ; i++){
@@ -18,7 +20,7 @@ int main(void){
             scanf("%d", &score[i][j]);
         }
     }
-    printf("%d\n1", low_score);
+    
 
     for(i = 0; i < QUIZ; i++){
         for(j = 0; j < STDUENT; j++){
@@ -36,7 +38,7 @@ int main(void){
 
             if(highscore < score[j][i])
                 highscore = score[j][i];
-            if(low_score > score[j][i])
+            else if(score[j][i] < low_score)
                 low_score = score[j][i];
 
         }
