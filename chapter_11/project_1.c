@@ -10,7 +10,7 @@ void pay_amount(int dollas, int *twenties, int *tens, int *fives, int *ones);
 int main(void){
     int dollars, twenties, tens, fives, ones;
 
-    printf("Enter a dolar amount: ");
+    printf("\nEnter a dollar amount: ");
     scanf("%d", &dollars);
 
     //passing the address of the variables into the function
