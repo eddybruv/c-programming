@@ -42,37 +42,37 @@ void find_closest_flight(int desired_time,
         t7_00 = 1140, t9_20 = 1280,
         t9_45 = 1305, t11_58 = 1438;
 
-    if(desired_time < 480){
+    if(desired_time < (480 + t9_43) / 2){
         *departure_time = t8_00;
         *arrival_time = t10_16;
     }
 
-    else if(desired_time < t9_43){
+    else if(desired_time < (t9_43 + t11_19) / 2){
         *departure_time = t9_43;
         *arrival_time = t11_52;
     }
 
-    else if(desired_time < t11_19){
+    else if(desired_time < (t11_19 + t12_47) / 2){
         *departure_time = t11_19;
         *arrival_time = t1_31;
     }
 
-    else if(desired_time < t12_47){
+    else if(desired_time < (t12_47 + t2_00) / 2){
         *departure_time = t12_47;
         *arrival_time = t3_00;
     }
 
-    else if(desired_time < t2_00){
+    else if(desired_time < (t2_00 + t3_45) / 2){
         *departure_time = t2_00;
         *arrival_time = t4_08;
     }
 
-    else if(desired_time < t3_45){
+    else if(desired_time < (t3_45 + t7_00) / 2){
         *departure_time = t3_45;
         *arrival_time = t5_55;
     }
 
-    else if(desired_time < t7_00){
+    else if(desired_time < (t7_00 + t9_45) / 2){
         *departure_time = t7_00;
         *arrival_time = t9_20;
     }
