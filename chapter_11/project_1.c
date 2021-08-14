@@ -19,7 +19,7 @@ int main(void){
     printf("\n$20 dollar bills: %d", twenties);
     printf("\n$10 dollar bills: %d", tens);
     printf("\n$5 dollar bills: %d", fives);
-    printf("\n$1 dollar bills: %d", ones);
+    printf("\n$1 dollar bills: %d\n\n", ones);
 
     return 0;
 }
