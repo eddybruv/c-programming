@@ -1,24 +1,22 @@
-/*Date: 02-08-2021
+/*Date: 17-08-2021
     by eddybruv
     */
 
 #include <stdio.h>
-#include <math.h>
 
 int main(void){
-    float x, y = 1.0f, avg = 0.0;
-    printf("Enter positive number: ");
-    scanf("%f", &x);
+    printf("Enter a sentence: ");
+    getchar();
+    int ch;
+    float words = 1, letters = 0;
 
-    while (x != y){
-        float div = x/y;
-        avg = (div + y)/2;
-        
-        if(fabs(y - avg) < (.00001) * avg)
-        break;
-        
-        y = avg;
-    }    
-    printf("Square root: %f", y);
+    while((ch = getchar())!= '\n'){
+        if(ch == ' ')
+            words++;
+         if(ch != ' ')
+            letters++;
+    }
+
+    printf("Average word length: %.1f",(letters / words));
     return 0;
 }
