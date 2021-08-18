@@ -17,6 +17,8 @@ int main(void){
     scanf("%d", &num_years);
 
     printf("\nYears");
+
+    
     for(i = 0; i < NUM_RATES;i++){
         printf("%6d%%", low_rate + i);
         value[i] = INITIAL_BALANCE;
