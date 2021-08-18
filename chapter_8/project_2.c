@@ -16,7 +16,7 @@ int main(void){
 
     printf("Digit:      0  1  2  3  4  5  6  7  8  9\n");
     printf("Occurances: ");
-
+    
     while(n > 0){
         digit = n % 10;
         if(digit_seen[digit]){
