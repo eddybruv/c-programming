@@ -17,4 +17,4 @@ int find_largest(int a[], int n)
 /**
  * Suppose that we call find_largest as follows:
  * largest = find_largest(b, N);
- * /
+ * */
