@@ -1,0 +1,12 @@
+middle = (low + high)/2
+
+Problems
+
+* Pointer and pointer addition is not allowed
+* Pointer to pointer division is not allowed too
+
+Solution
+
+* We could solve this by dereferencing:
+
+    *middle = (*low + *high) / 2
