@@ -1,6 +1,8 @@
 /* returns the size of a string */
 
-size_t mu_strlen (const char *s)
+#include <stddef.h>
+
+size_t my_strlen (const char *s)
 {
     size_t n;
 
