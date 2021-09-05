@@ -14,6 +14,6 @@ int main(void){
     if(time == 'p'|| time == 'P')
         hrs = hrs + 12;
 
-    printf("Equivalent 24-hour time : %d:%d", hrs, mins);
+    printf("Equivalent 24-hour time : %.2d:%.2d", hrs, mins);
     return 0;
 }
