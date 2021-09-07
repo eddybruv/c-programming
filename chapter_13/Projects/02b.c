@@ -13,9 +13,8 @@ int read_line(char str[], int n);
 
 int main(void){
     char reminders[MAX_REMIND][MSG_LEN + 3];
-    char time[MAX_REMIND][MSG_LEN];
-    char day_str[3], msg_str[MSG_LEN + 1];
-    int day, i, j, num_remind = 0;
+    char day_str[10], msg_str[MSG_LEN + 1];
+    int day, hr, min, i, j, num_remind = 0;
 
     for (;;)
     {
@@ -33,19 +32,18 @@ int main(void){
             printf("Wrong date.\n");
             continue;
         }
-        sprintf(day_str, "%2d", day);
+        scanf("%2d:%2d", &hr, &min);
+        sprintf(day_str, "%2d %.2d:%.2d", day, hr, min);
         read_line(msg_str, MSG_LEN);
 
         for (i = 0;  i < num_remind; i++)
             if (strcmp(day_str, reminders[i]) < 0)
-                if (strcmp (msg_str, reminders[i]) < 0)
-                    break;
+                break;
         for (j = num_remind; j > i; j--)
             strcpy(reminders[j], reminders[j - 1]);
 
         strcpy(reminders[i], day_str);
         strcat(reminders[i], msg_str);
-        //strcat(time[i], msg_str);
 
         num_remind++;
     }
