@@ -33,11 +33,11 @@ bool are_anagrams(const char *word1, const char *word2)
 
     for(i = 0; word1[i] != '\0'; i++)
         if(isalpha(word1[i]))
-            seen[word1[i] - 'a']++;
+            seen[tolower(word1[i]) - 'a']++;
 
     for(i = 0; (word2[i]) != '\0'; i++)
         if(isalpha(word2[i]))
-            seen[word2[i] - 'a']--;
+            seen[tolower(word2[i]) - 'a']--;
 
     for(i = 0; i < 26; i++)
         if(seen[i] != 0)
