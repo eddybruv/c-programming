@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 #define CHECK(x, y, n) (((x) > (0)) && (x) <= ((n) - 1) && ((y) > (0)) && (y) <= ((n) - 1)) ? 1 : 0
-#define MEDIAN(x, y, z) ((x) + (y) + (z)) / 2
+#define MEDIAN(x,y,z) (((x)>=(y)&&(x)<=(z))?(x):((y)>=(x)&&(y)<=(z))?(y):(z))
 #define POLYNOMIAL(x) (3*(power((x), 5)) + 2*(power((x), 4)) - 5*(power((x), 3)) - 1*(power((x), 2)) + 7*(x) - 6)
 
 int power(int x, int n);
