@@ -21,3 +21,20 @@ void add_word(const char *word);
  **/
 
 int space_remaining(void);
+
+/**
+ * write_line: Writes the current line with
+ *             justification.
+ **/
+
+void write_line(void);
+
+/**
+ * flush_line: Writes the current line without 
+ *             justification. If the line is empty, does
+ *             nothing.
+ **/
+
+void flush_line(void);
+
+#endif
