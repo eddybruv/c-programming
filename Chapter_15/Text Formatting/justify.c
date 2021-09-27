@@ -32,6 +32,7 @@ int main(void)
             write_line();
             clear_line();
         }
+        
         add_word(word);
     }
 }
