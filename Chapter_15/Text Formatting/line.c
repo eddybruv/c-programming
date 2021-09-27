@@ -22,7 +22,8 @@ void add_word(const char *word)
         line[line_len+1] = '\0';
         line_len++;
     }
-    stract(line, word);
+
+    strcat(line, word);
     line_len += strlen(word);
     num_words++;
 }
@@ -49,7 +50,7 @@ void write_line(void)
             num_words--;
         }
     }
-    putchar(' ');
+    putchar('\n');
 }
 
 void flush_line(void)
