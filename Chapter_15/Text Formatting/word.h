@@ -1,6 +1,13 @@
-#ifdef WORD_H
+#ifndef WORD_H
 #define WORD_H
 
-void read_word(char *word, int len)
+/**
+ * read_word: Reads the next word from the inout and 
+ *            stores it in word. Makes word empty if no
+ *            word could be read because of the end-of-line.
+ *            Truncates the word if its length exceeds len.
+ **/
 
-#endif
+void read_word(char *word, int len);
+
+#endif 
