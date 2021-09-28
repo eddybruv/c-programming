@@ -6,8 +6,9 @@
  *            stores it in word. Makes word empty if no
  *            word could be read because of the end-of-line.
  *            Truncates the word if its length exceeds len.
+ *            Returns the number of characters stored (strlen).
  **/
 
-void read_word(char *word, int len);
+int read_word(char *word, int len);
 
 #endif 
