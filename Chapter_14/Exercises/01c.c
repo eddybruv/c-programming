@@ -11,5 +11,5 @@ void main(){
     int x, y;
     printf("Enter two numbers: ");
     scanf("%d, %d", &x, &y);
-    printf("The value is %d", PRO(x, y));
+    printf("The value returned is %d", PRO(x, y));
 }
