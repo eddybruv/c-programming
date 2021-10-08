@@ -11,7 +11,7 @@ int main(void){
     
     while(getchar() != '\n')
         len++;
-
+    
     printf("Your message was %d characters long.\n", len);
     return 0;
 }
