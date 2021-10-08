@@ -13,7 +13,7 @@ int main(void)
     printf("Enter monthly payment: ");
     scanf("%f", &payment);
 
-    float first_payment = (loan - payment) +  (((rate / 100) / 12) * 20000);
+    float first_payment = (loan - payment) +  (((rate / 100) / 12) * payment);
     float second_payment = (first_payment - payment) + (((rate / 100) / 12) * first_payment);
     float third_payment = (second_payment - payment) + (((rate / 100) / 12) * second_payment);
 
