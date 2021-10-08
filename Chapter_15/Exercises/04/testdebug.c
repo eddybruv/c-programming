@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// #define DEBUG
+#define DEBUG
 #include "debug.h"
 
 int main(void)
