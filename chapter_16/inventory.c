@@ -8,7 +8,7 @@ struct part {
     int number;
     char name[NAME_LEN + 1];
     int on_hand; 
-} inverntory[MAX_PARTS];
+} inventory[MAX_PARTS];
 
 int num_parts = 0;     /* number of parts currently stored*/
 
@@ -22,7 +22,7 @@ int main(void)
 {
     char code;
     for (;;) {
-        print("Enter operation code: ");
+        printf("Enter operation code: ");
         scanf(" %c", &code);
         while (getchar() != '\n')    /* skips to end of line */
             ;
@@ -39,6 +39,7 @@ int main(void)
         }
         printf("\n");
     }
+}
 
     /**
      * find_part:   Looks up a part number in the inventory
@@ -104,7 +105,7 @@ int main(void)
         i = find_part(number);
         if (i >= 0) {
             printf("Part name: %s\n", inventory[i] .name);
-            print("Quality on hand: %d\n", inventory[i] .on_hand);
+            printf("Quality on hand: %d\n", inventory[i] .on_hand);
         }
         else {
             printf("Part not found.\n");
@@ -146,10 +147,9 @@ int main(void)
     {
         int i;
 
-        printf("Part Number    Part Name
+        printf("Part Number    Part Name"
                "Quantity on Hand\n");
         for (i = 0; i < num_parts; i++)
             printf("%7d       %-2s%11d\n", inventory[i] .number,
                     inventory[i] .name, inventory[i] .on_hand);
     }
-}
