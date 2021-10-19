@@ -1,4 +1,5 @@
 #include <stdbool.h>
+#include <stdio.h>
 
 struct color {
     int red;
