@@ -41,7 +41,7 @@ struct color brighter(struct color c)
         c2.green = 3;
         c2.blue = 3;
 
-        //return c2;
+        return c2;
     }
 
     if(c.red > 0 && c.red < 3)
@@ -71,4 +71,12 @@ struct color darker(struct color c){
     c.blue *= 0.7;
 
     return c;
+}
+
+int main(void){
+    struct color main = {0, 0, 0};
+    main = brighter(main);
+    printf("Red: %d, Green: %d, Blue: %d", main.red, main.green, main.blue);
+
+    return 0;
 }
