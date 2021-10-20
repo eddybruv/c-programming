@@ -4,7 +4,7 @@
 
 struct point {
     int x, y;
-}center;
+};
 
 struct shape {
     int shape_kind;
