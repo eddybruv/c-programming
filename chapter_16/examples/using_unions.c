@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <string.h>
+
 /**
  * Suppose we're designing a structure that will contain
  * information abount an item that's sold through a gift catalog.
@@ -53,4 +56,11 @@ struct catalog_item2 {
             int sizes;
         } shirt;
     }item;
-};
+}c2;
+
+int main(void){
+    strcpy(c2.item.mug.design, "cats");
+
+    printf("%s", c2.item.mug.design);
+    return 0;
+}
