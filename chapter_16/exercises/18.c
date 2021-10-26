@@ -2,7 +2,7 @@
 
 #define BOARD_LEN 8
 
-tyepdef enum {
+typedef enum {
     EMPTY, 
     PAWN, 
     BISHOP, 
@@ -12,12 +12,12 @@ tyepdef enum {
     KING
 } Piece;
 
-tyepdef enum {
+typedef enum {
     BLACK, 
     WHITE
 } Color;
 
-type struct {
+typedef struct {
     Piece piece_type;
     Color piece_color; 
 } Square;
