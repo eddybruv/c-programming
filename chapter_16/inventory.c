@@ -35,6 +35,9 @@ int main(void)
                     break;
             case 'p': print();
                     break;
+            case 'q':
+                    printf("Bye!");
+                    return 0;
             default: printf("Illegal code\n");
         }
         printf("\n");
@@ -147,7 +150,7 @@ int main(void)
     {
         int i;
 
-        printf("Part Number    Part Name"
+        printf("Part Number    Part Name       "
                "Quantity on Hand\n");
         for (i = 0; i < num_parts; i++)
             printf("%7d       %-2s%11d\n", inventory[i] .number,
