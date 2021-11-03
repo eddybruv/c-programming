@@ -6,12 +6,22 @@ struct node {
     struct node *next_node;
 };
 
-struct node *add_to_list (struct node *list, int n);
+struct node *add_to_list (struct node *list);
 struct node *read_numbers(void);
-struct node *search_list(struct node *list, int n);
+void search_list(struct node *list, int n);
+struct node *delete_node (struct node *list, int n);
+void print_list (struct node *list);
 
 int main(void){
-    read_numbers();
+    struct node *head = NULL;
+
+    for (int i = 0; i < 7; i++)
+        head = add_to_list(head);
+
+    search_list(head, 6);
+    head = delete_node(head, 8);    
+    print_list(head);
+    
     return 0;
 }
 
@@ -23,8 +33,10 @@ int main(void){
  *          the list
  **/
 
-struct node *add_to_list (struct node *list, int n){
+struct node *add_to_list (struct node *head){
     struct node* new_node;
+    int n;
+
     new_node = malloc (sizeof(struct node));
     
     if(new_node == NULL) {
@@ -32,28 +44,16 @@ struct node *add_to_list (struct node *list, int n){
         exit(EXIT_FAILURE);
     }
 
+    printf("Enter an interger: ");
+    scanf("%d", &n);
+
     new_node -> value = n;
-    new_node -> next_node = list;
-    return new_node;
-}
+    new_node -> next_node = head;
+    head = new_node;
 
-/**
- * @brief: uses the add_to_list function to create a linked list 
- *         constaining numbers entered by the user.
- * @return: returns pointer to the first node
- **/
+    //printf("%d->", head->value);
+    return head;
 
-struct node *read_numbers(void) {
-    struct node *first = NULL;
-    int n;
-
-    printf("Enter a series of intergers (0 to terminate): ");
-    for (;;) {
-        scanf("%d", &n);
-        if (n == 0)
-            return first;
-        first = add_to_list(first, n);
-    }
 }
 
 /**
@@ -64,11 +64,54 @@ struct node *read_numbers(void) {
  *          returns NULL if interger is not found.
  **/
 
-struct node *search_list (struct node *list, int n) {
+void search_list(struct node *list, int n) {
     struct node *p;
+    printf("Enter number to be searched: ");
+    scanf("%d", &n);
+    for (p = list; p != NULL; p = p -> next_node){
+        if (p -> value == n){
+            printf("%d: Found\n", p -> value);
+            return;
+        }
+    }
+    printf("%d: Not found\n", n);
+}
 
-    for (p = list; p != NULL; p = p -> next_node)
-        if (p -> value == n)
-            return p;
-    return NULL;
+/**
+ * @brief: searches a list to find a node to be deleted.
+ * @param list: a list to search.
+ * @param n: value in the node to be deleted.
+ * @return: pointer to the list.
+ **/
+
+struct node *delete_node (struct node *list, int n){
+    struct node *cur, *prev;
+
+    for (cur = list, prev = NULL; 
+        cur != NULL && cur->value != n;
+        prev = cur, cur = cur->next_node)
+        ;
+    
+    if(cur == NULL) //n wasnot found
+        return list;
+    if (prev == NULL) //n is the first node.
+        list = list -> next_node;
+    else 
+        prev -> next_node = cur->next_node; //by pass
+
+    free(cur);
+    return list;
+}
+
+/**
+ * @brief: Prints the list.
+ **/
+
+void print_list(struct node *list){
+    struct node *p;
+    
+    for(p = list;p != NULL;p = p->next_node)
+        printf("%d -> ", p->value);
+    if (p == NULL)
+        printf("NULL\n");
 }
