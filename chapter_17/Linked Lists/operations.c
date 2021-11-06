@@ -37,7 +37,7 @@ struct node *add_to_list (struct node *head){
     struct node* new_node;
     int n;
 
-    new_node = malloc (sizeof(struct node));
+    new_node = (struct node*) malloc (sizeof(struct node));
     
     if(new_node == NULL) {
         printf("Error: malloc failed in add_to_list\n");
