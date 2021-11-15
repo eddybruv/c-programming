@@ -92,6 +92,15 @@ struct node *delete_node (struct node *list, int n){
         prev = cur, cur = cur->next_node)
         ;
     
+    /**
+     * cur = list;
+     * prev = NULL;
+     * while (cur->value != n && cur != NULL){ 
+     *      prev = cur;
+     *      cur = cur->next_node;
+     * }
+     **/
+    
     // n wasn't found
     if(cur == NULL) 
         return list;
