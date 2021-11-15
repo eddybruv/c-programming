@@ -126,5 +126,5 @@ void print_list(struct node *list){
     for(p = list;p != NULL;p = p->next_node)
         printf("%d -> ", p->value);
     if (p == NULL)
-        printf("NULL\n");
+        printf("NULL\n"); 
 }
