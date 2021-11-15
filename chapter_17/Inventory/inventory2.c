@@ -65,13 +65,18 @@ struct part *find_part (int number)
 {
     struct part *p;
 
+    //since the list is sorted, the for loop will break if it finds
+    //a part number greater than the requested part number. 
     for (p = inventory;
          p != NULL && number > p->number;
          p = p->next)
         
         ;
+
+    //if found, return p(pointer pointing to the node containing part num)
     if (p != NULL && number == p -> number)
         return p;
+    //else
     return NULL;
 }
 
@@ -96,6 +101,9 @@ void insert (void){
     printf("Enter part number: ");
     scanf("%d", &new_node->number);
 
+    // looks for a suitable position in the list to add the node.
+    // This sorts the list automatically, because the part number of the current
+    // node must be greater than that of the previous node.
     for (cur = inventory, prev = NULL;
          cur != NULL && (new_node -> number) > (cur -> number);
          prev = cur, cur = cur -> next)
@@ -113,8 +121,12 @@ void insert (void){
     scanf("%d", &new_node->on_hand);
 
     new_node->next = cur;
-    if (prev == NULL)         //first case condition
+
+    //first case condition
+    if (prev == NULL)         
         inventory = new_node;
+    
+    //other
     else   
         prev->next = new_node;
 }
