@@ -6,7 +6,7 @@ struct node {
     struct node *next;
 };
 
-void add_end(struct node **point, int n);
+void add_end2(struct node **point, int n);
 struct node *add_head (struct node *point, int n);
 struct node *add_end1(struct node *list, int n);
 

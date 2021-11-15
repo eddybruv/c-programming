@@ -92,12 +92,24 @@ struct node *delete_node (struct node *list, int n){
         prev = cur, cur = cur->next_node)
         ;
     
-    if(cur == NULL) //n wasnot found
+    // n wasn't found
+    if(cur == NULL) 
         return list;
-    if (prev == NULL) //n is the first node.
+    /**
+     * n is in the first node.
+     * prev is equals to null because if the for loop 
+     * iterates only once and exits, then prev is still pointing
+     * to null.
+     **/
+
+    if (prev == NULL) 
         list = list -> next_node;
+    /**
+     * n is in some other node.
+     * notice the by pass.
+     **/
     else 
-        prev -> next_node = cur->next_node; //by pass
+        prev -> next_node = cur->next_node;
 
     free(cur);
     return list;
@@ -105,6 +117,7 @@ struct node *delete_node (struct node *list, int n){
 
 /**
  * @brief: Prints the list.
+ * @param list: a copy of the pointer pointing to the head of the list.
  **/
 
 void print_list(struct node *list){
