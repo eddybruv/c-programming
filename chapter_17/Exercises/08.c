@@ -15,26 +15,21 @@ void print_stack(struct stack *);
 struct stack* pop(struct stack *);
 void top(struct stack *head);
 void last(struct stack *last);
+char read_char(char *);
 
 int main(void){
     struct stack *head, *list;
     head = NULL;
+    char operator, *token;
+    int ch;
 
-    for(int i = 0; i < 10; i++){
-        if(head == NULL){
-            head = add_stack(head, 6);
-            list = head;
-        }
-        else {
-            list = add_stack(list, i); 
+    while((ch = getchar())){
+        if (ch == ' ' || ch == '\n'){
+
         }
     }
 
-    print_stack(head);
-    head = pop(head);
-    print_stack(head);
-    top(head);
-    last(list);
+    
     return 0;
 }
 
