@@ -53,12 +53,12 @@ struct stack* add_stack(struct stack *list, int n){
         list->next = new_node;
         list = list->next;
     }
-
+ 
     list->next = NULL;
 
     return new_node;
 }
-
+ 
 void print_stack(struct stack *list){
     while (list->next != NULL){
         printf("%d->", list->data);
