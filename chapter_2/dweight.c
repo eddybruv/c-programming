@@ -10,7 +10,7 @@ int main(void){
     int height, length, width, volume, weight;
 
     height = 8;
-    length = 12;
+    length = 12.0;
     width = 10;
     volume = (volume + 165)  / 166;
 
