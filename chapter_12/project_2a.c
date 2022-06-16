@@ -10,7 +10,7 @@
 #define SIZE 50
 
 bool is_palindrome(char *);
-
+ 
 int main(void){
     char message[SIZE];
     printf("Enter a sentence: ");
