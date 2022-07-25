@@ -41,7 +41,7 @@ int main(void) {
     hourDiff -= 1;
   }
 
-  printf("Difference in time is %.2d Hours and %.2d Minutes\n", hourDiff, minDiff);
+  printf("Difference in time is %.3d Hours and %.3d Minutes\n", hourDiff, minDiff);
 
   return 0;
   
